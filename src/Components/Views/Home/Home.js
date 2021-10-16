@@ -1,3 +1,6 @@
-export default function Home() {
-  return <p className="bg-red-600">Sono in home</p>;
+import Header from "../../UI/Header/Header";
+
+export default function Home(props) {
+  const latestData = props.data[props.data.length - 1];
+  return <Header latestData={latestData} />;
 }
